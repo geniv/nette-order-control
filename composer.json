@@ -1,0 +1,25 @@
+{
+  "name": "geniv/nette-order-control",
+  "description": "Order control class for Nette Framework",
+  "keywords": [
+    "nette",
+    "order",
+    "control",
+    "geniv"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Radek Fryšták",
+      "email": "geniv.radek@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "classmap": [
+      "src/"
+    ]
+  }
+}
