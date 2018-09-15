@@ -17,6 +17,9 @@ interface IOrderControl
         CURRENCY_USD = 'USD',
         CURRENCY_GBP = 'GBP';
 
+    const
+        ZEROS = 4;  // year + count zero
+
 
     /**
      * Set price.
@@ -157,4 +160,14 @@ interface IOrderControl
      * @return float
      */
     public function getDeliveryPriceVat($priceAndVat = false): float;
+
+
+    /**
+     * Get order number.
+     *
+     * @param array $items
+     * @param int   $zeros
+     * @return string
+     */
+    public function getOrderNumber(array $items, int $zeros = self::ZEROS): string;
 }

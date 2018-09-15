@@ -243,4 +243,19 @@ class OrderControl implements IOrderControl
         }
         return round($result);
     }
+
+
+    /**
+     * Get order number.
+     *
+     * @param array $items
+     * @param int   $zeros
+     * @return string
+     */
+    public function getOrderNumber(array $items, int $zeros = self::ZEROS): string
+    {
+        $number = count($items) + 1;
+        // current year + zerofill number orders
+        return date('Y') . str_pad((string) $number, $zeros, '0', STR_PAD_LEFT);
+    }
 }

@@ -47,6 +47,8 @@ setDelivery(string $name, float $price, float $vat): IOrderControl;
 getDeliveryName(): string;
 getDeliveryPrice(): float;
 getDeliveryPriceVat($priceAndVat = false): float;
+
+getOrderNumber(array $items, int $zeros = self::ZEROS): string;
 ```
 
 php usage:
